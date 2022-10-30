@@ -1,0 +1,121 @@
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html
+{
+    font-size: 62.5%;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+.main
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sectionCards
+{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.sectionTitle
+{
+    width: 98%;
+    height: 130px;
+    
+}
+
+.sectionTitle h1
+{
+    font-size: 4rem;
+}
+
+.sectionTitle p
+{
+    padding-left: 10%;
+    font-size: 2.4rem;
+}
+
+
+.section_card
+{
+    width: 290px;
+    height: 400px;
+    display: inline-block;
+    border: 2px solid rgb(7, 99, 38);
+    border-radius: 5px;
+    margin: 20px;
+}
+
+.card-name{
+    height: 50px;
+    background-color: rgb(7, 99, 38);
+    display: flex;
+    justify-content: center;
+}
+
+.card-name_name
+{
+    font-size: 1.6rem;
+    grid-area: name;
+    align-self: center;
+    color: white;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+.card-stats
+{
+    width: 100%;
+    height: 120px;
+    padding: 16px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.card-stats_data h3
+{
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    
+}
+
+.card-stats_data h3 span
+{
+    font-weight: 500;
+}
+
+.card-stats_phase
+{
+    align-self: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.card-image{
+    height: 222px;
+}
+
+img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}

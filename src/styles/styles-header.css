@@ -1,0 +1,42 @@
+
+
+.header-bar
+{
+    width: 100%;
+    height: 16vh;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(2, 50%);
+    margin-bottom: 100px;
+
+}
+
+.header-bar_background{
+    width: 100%;
+    height: 100%;
+    grid-column: 1 / 5;
+    
+    background-color: rgb(7, 99, 38);
+}
+
+.header-bar_img
+{
+    position: absolute;
+    top: 2%;
+    left: 10%;
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    overflow: auto;
+    border-radius: 2px;
+    box-shadow: 2px 4px 10px 4px rgba(0, 0, 0, 0.39);
+}
+
+.header-bar_buttons
+{
+    width: 100%;
+    height: 100%;
+    grid-column: 3 / 5;
+    display: flex;
+    justify-content: flex-end;
+}
