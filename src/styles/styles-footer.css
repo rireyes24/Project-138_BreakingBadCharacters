@@ -1,0 +1,78 @@
+
+.footer-bar
+{
+    width: 100%;
+    height: 180px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-content: center;
+    background-color: rgb(7, 99, 38);
+    color: white;
+    letter-spacing: 2px;
+    margin-top: 70px;
+}
+
+.footer-bar_developer
+{
+    width: 80%;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    font-size: 1.6rem;
+    letter-spacing: 3px;
+}
+
+.footer-bar_webs
+{
+    width: 80%;
+    justify-self: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-bar_webs a
+{
+    width: 40px;
+    min-width: 34px;
+    height: 40px;
+    display: flex;
+    
+}
+
+.icon-instagram
+{
+    width: 40px;
+    min-width: 30px;
+    height: 40px;
+    background-image: url('../assets/icons/instagram.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+}
+
+.footer-bar_repository
+{
+    width: 90%;
+    height: 68px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    justify-self: center;
+}
+
+.footer-bar_repository h2 
+{
+    align-self: flex-start;
+}
+
+.footer-bar_repository a
+{
+    align-self: center;
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: whitesmoke;
+}

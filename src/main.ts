@@ -1,12 +1,15 @@
 import './styles/styles-header.css'
 import './styles/styles-card.css';
 import './styles/styles-buttons.css';
-import {CreateCharacter} from './components/CreateCharacter'
+import './styles/styles-footer.css'
+import {CreateCharacter} from './classes/CreateCharacter'
 import dataCharacters from './utils/dataCharacters'
 import { HeaderBar } from './components/HeaderBar' 
 import { Buttons } from './components/Buttons';
 import {RenderCharacters} from './components/RenderCharacters'
 import {total, total2} from './utils/getData'
+import { Footer } from './components/Footer';
+
 
 
 
@@ -23,14 +26,19 @@ if(inputButtons != null)
     inputButtons.innerHTML = Buttons;
 }
 
-//Renderiza las Cards en el HTML
+//Renderiza las Cards
 const selector = document.querySelector('#sectionCards') as HTMLElement;
 if(selector != null)
 {
     selector.innerHTML = RenderCharacters(57);
 }
 
-
+//Renderiza el Footer
+const renderFooter = document.querySelector('#infoFooter') as HTMLElement;
+if(renderFooter != null)
+{
+    renderFooter.innerHTML = Footer;
+}
 
 
 
@@ -64,10 +72,9 @@ btnDead.addEventListener('click', () => {
     });
 })
 
-
-
 //NO usar la posicion [0] de dataCharacters
 //Genera un numero especifico de personajes
+
 
 function generatorCharacters(nCharacters: number)
 {
@@ -77,6 +84,7 @@ function generatorCharacters(nCharacters: number)
     }
 }
 generatorCharacters(dataCharacters.length);
+
 
 
 

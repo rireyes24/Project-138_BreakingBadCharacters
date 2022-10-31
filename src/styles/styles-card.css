@@ -1,3 +1,7 @@
+@import 
+    url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap');
+
+
 *
 {
     box-sizing: border-box;
@@ -8,7 +12,7 @@
 html
 {
     font-size: 62.5%;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     
 }
 
@@ -65,7 +69,7 @@ html
 
 .card-name_name
 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     grid-area: name;
     align-self: center;
     color: white;
@@ -89,7 +93,7 @@ html
 .card-stats_data h3
 {
     width: 100%;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: bold;
     letter-spacing: 1px;
     
