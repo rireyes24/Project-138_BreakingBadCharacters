@@ -1,10 +1,15 @@
 
 export const Buttons = `
-    <div class="buttons">
-        <button>F. White</button>
-        <button>F. Salamanca</button>
-        <button id= "btnAlive">Alive</button>
-        <button id= "btnDead">Dead</button>
+    <div class="divButtons">
+        <button class="buttonOrderBy">Order By<span></span></button>
+        <div class="buttonsOrder">
+            <button id="btnDefault">Default</button>
+            <button id="btnAlphabetical">Alphabetical</button>
+            <button id="btnAlive">Alive</button>
+            <button id="btnDead">Dead</button>
+            <button>Family White</button>
+            <button>Family Salamanca</button>
+        </div>
     </div>
 `;
 

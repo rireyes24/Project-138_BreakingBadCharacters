@@ -1,16 +1,16 @@
 
-export const RenderCharacters = (nCharacters: number) => {
+export const RenderCharacters = (getIDs: number[]) => {
     
     let totalRender = [];
-    
-    for(let i = 1; i <= nCharacters; i++)
+
+    for(let i = 0; i < getIDs.length; i++)
     {
-        totalRender.push(`<div id="BB${i.toString()}"></div>`);
+        totalRender.push(`<div id="BB${getIDs[i]}"></div>`);
     }
 
     const stringRender = totalRender.toString();
     const render = stringRender.replace(/,/g, "")
-
+    console.log(render);
     return render;
 }
 

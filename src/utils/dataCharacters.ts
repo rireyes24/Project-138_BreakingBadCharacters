@@ -2,16 +2,6 @@
 
 const dataCharacters  = [
     {
-        id: 0,
-        name: "",
-        nickname: "",
-        birthday: "",
-        status: "",
-        imageUrl: "",
-        phrase: "",
-        starring: "",
-    },
-    {
         id: 1,
         name: 'Walter H. White',
         nickname: 'Heisenberg',

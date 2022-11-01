@@ -9,6 +9,7 @@ import { Buttons } from './components/Buttons';
 import {RenderCharacters} from './components/RenderCharacters'
 import {total, total2} from './utils/getData'
 import { Footer } from './components/Footer';
+import {getIDs, getIDsAlphabetically} from './utils/getData';
 
 
 
@@ -30,8 +31,38 @@ if(inputButtons != null)
 const selector = document.querySelector('#sectionCards') as HTMLElement;
 if(selector != null)
 {
-    selector.innerHTML = RenderCharacters(57);
+    selector.innerHTML = RenderCharacters(getIDs);
 }
+
+//Crea los personajes
+function generatorCharacters()
+{
+    dataCharacters.forEach(items => {
+        CreateCharacter.create(items);
+    })
+    
+}
+generatorCharacters();
+
+
+
+//Genera el click del boton Default
+const btnDefault = document.querySelector('#btnDefault') as HTMLElement;
+btnDefault.addEventListener('click', () => {
+    selector.innerHTML = RenderCharacters(getIDs);
+    generatorCharacters();
+});
+
+
+//Genera el click del boton Alphabetical
+const btnAlphabetical = document.querySelector('#btnAlphabetical') as HTMLElement;
+btnAlphabetical.addEventListener('click', () => {
+    selector.innerHTML = RenderCharacters(getIDsAlphabetically);
+    generatorCharacters();
+});
+
+
+
 
 //Renderiza el Footer
 const renderFooter = document.querySelector('#infoFooter') as HTMLElement;
@@ -39,6 +70,7 @@ if(renderFooter != null)
 {
     renderFooter.innerHTML = Footer;
 }
+
 
 
 
@@ -71,29 +103,3 @@ btnDead.addEventListener('click', () => {
         divAlive.style.display = 'none';
     });
 })
-
-//NO usar la posicion [0] de dataCharacters
-//Genera un numero especifico de personajes
-
-
-function generatorCharacters(nCharacters: number)
-{
-    for(let i = 1; i <= nCharacters; i++)
-    {
-        CreateCharacter.create(dataCharacters[i]);
-    }
-}
-generatorCharacters(dataCharacters.length);
-
-
-
-
-
-
-
-
-
-
-
-
-
