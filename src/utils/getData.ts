@@ -1,4 +1,5 @@
 import dataCharacters from './dataCharacters'
+import Stats from './interface';
 
 //Get IDs
 const IDs = dataCharacters.map(idCharacters => {
@@ -34,32 +35,28 @@ export const getIDsAlphabetically = dataCharactersAlphabetical.map(item => {
 
 
 
-//Get Alive
+//Get Characters Alive and Characters Dead
 
-//usar sort y luego eliminar los datos de los muertos
-//o separarlos en 2 arays diferentes
-const alive = dataCharacters.map(item => {
-    let newAlive = 0;
-    if(item.status === "Alive")
-    {
-        newAlive = item.id;
+//Array of type Stats(My interface)
+let getAlive: Stats[] = [];
+let getDead: Stats[] = [];
+dataCharacters.forEach(items => {
+    if(items.status === "Alive")
+    {   
+        getAlive.push(items);
+        getAlive.sort((a, b) => a.id - b.id);
     }
-    return newAlive;
-})
-
-//Filtro los items vacios
-export const total = alive.filter(filtro => filtro != 0);
-
-//Get Dead
-const dead = dataCharacters.map(item => {
-    let newDead = 0;
-    if(item.status === "Dead")
+    if(items.status === "Dead")
     {
-        newDead = item.id
+        getDead.push(items);
+        getDead.sort((a, b) => a.id - b.id);
     }
-    return newDead;
 });
 
-export const total2 = dead.filter(filtro => filtro != 0);
-
-
+//Get IDs Alive and Dead
+export const getIDsAlive = getAlive.map(items => {
+    return items.id;
+});
+export const getIDsDead = getDead.map(items => {
+    return items.id;
+});

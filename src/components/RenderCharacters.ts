@@ -9,8 +9,7 @@ export const RenderCharacters = (getIDs: number[]) => {
     }
 
     const stringRender = totalRender.toString();
-    const render = stringRender.replace(/,/g, "")
-    console.log(render);
+    const render = stringRender.replace(/,/g, "");
     return render;
 }
 

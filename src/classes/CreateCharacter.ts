@@ -32,7 +32,7 @@ export class CreateCharacter {
                         <img src="${imageUrl}" alt="${name}">
                     </div>
 
-                    <div class="card-stats">
+                    <div id="BBB${id.toString()}" class="card-stats">
                         <div class="card-stats_data">
                             <h3 class="">Nickname: <span>${nickname}</span></h3>
                             <h3 class="">Status: <span>${status}</span></h3>
