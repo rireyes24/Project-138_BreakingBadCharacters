@@ -22,7 +22,7 @@ export class CreateCharacter {
         if(input != null)
         {
             input.innerHTML = `
-                <section class="section_card">
+               
 
                     <div class="card-name">
                         <h1 class="card-name_name">${name}</h1>
@@ -41,7 +41,7 @@ export class CreateCharacter {
                         </div>
                         <p class="card-stats_phase">${phrase}</p>
                     </div>
-                </section>
+       
             `;
         }
     }

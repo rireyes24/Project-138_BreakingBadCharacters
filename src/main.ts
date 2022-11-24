@@ -2,6 +2,7 @@ import './styles/styles-header.css'
 import './styles/styles-card.css';
 import './styles/styles-buttons.css';
 import './styles/styles-footer.css'
+import './styles/resposiveDesign.css'
 import {CreateCharacter} from './classes/CreateCharacter'
 import dataCharacters from './utils/dataCharacters'
 import { HeaderBar } from './components/HeaderBar' 

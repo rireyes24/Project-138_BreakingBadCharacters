@@ -5,7 +5,7 @@ export const RenderCharacters = (getIDs: number[]) => {
 
     for(let i = 0; i < getIDs.length; i++)
     {
-        totalRender.push(`<div id="BB${getIDs[i]}"></div>`);
+        totalRender.push(`<div id="BB${getIDs[i]}" class="section_card"></div>`);
     }
 
     const stringRender = totalRender.toString();

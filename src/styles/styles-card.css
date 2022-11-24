@@ -2,10 +2,12 @@
     url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap');
 
 
-:root
+
+
+/* :root
 {
-    --marginAlign: 22px
-}
+    
+} */
 
 *
 {
@@ -31,30 +33,35 @@ html
 .sectionCards
 {
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    row-gap: 20px;
+    
 }
 
 
 .section_card
 {
-    width: 300px;
+    width: 78%;
     height: 360px;
+    align-self: flex-start;
+    justify-self: center;
     display: grid;
-    grid-template-rows: 13% 86%;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 20px;
+    grid-template-rows: 20% 80%;
 }
+
 
 .card-name{
     width: 100%;
-    height: 50px;
+    grid-row: 1 / 2;
     background-color: rgb(7, 99, 38);
     border-radius: 20px 20px 0px 0px;
     display: flex;
     justify-content: center;
+
+  
 }
 
 .card-name_name
@@ -74,6 +81,8 @@ html
     border-left: 2px solid rgb(7, 99, 38);
     border-right: 2px solid rgb(7, 99, 38);
     z-index: 2;
+
+   
 }
 
 img
@@ -106,6 +115,8 @@ img
     grid-column: 1 / 2;
     grid-row: 2 / 3;
     align-self: flex-end;
+
+  
 }
 
 .card-stats_data h3
