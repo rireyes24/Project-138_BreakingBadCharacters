@@ -17,9 +17,8 @@ export function animationPage()
         {
             idCard.addEventListener('click', () => {
                 
-                cardStats.style.visibility = "visible"
-                idCard.style.marginBottom = "140px"    
-                idInfoCard.style.transform = "translateY(140px)";
+                // Aqui ira la accion de hacer click para mostrar los datos 
+    
                 idInfoCard.style.transition = "500ms ease all"
                 saveID = idInfoCard.id;
                

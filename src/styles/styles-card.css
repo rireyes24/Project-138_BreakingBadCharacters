@@ -1,30 +1,8 @@
-@import 
-    url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap');
 
-
-
-
-/* :root
-{
-    
-} */
-
-*
-{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-html
-{
-    font-size: 62.5%;
-    font-family: 'Quicksand', sans-serif;
-    
-}
 
 .main
 {
+    width: 100hw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -33,25 +11,12 @@ html
 
 .sectionCards
 {
-    width: 100%;
-    height: auto;
+    width: 98%;
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: auto;
+    grid-template-columns: repeat(1, 90%);
+    justify-content: center;
     row-gap: 20px;
     
-}
-
-@keyframes closeStats1
-{
-    0%{
-        margin-bottom: 140px;
-    }
-    
-    100%{
-        margin-bottom: 0px;   
-    }
-
 }
 
 .section_card
@@ -61,127 +26,128 @@ html
     align-self: flex-start;
     justify-self: center;
     display: grid;
-    grid-template-rows: 20% 80%;
-    cursor: pointer;
-
-    animation: closeStats1 3s ease forwards;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 100%;
+    
 }
 
 
 .card-name{
+   
     width: 100%;
+    height: 100%;
+
+
+    grid-column: 1 / 2;
     grid-row: 1 / 2;
+
+    align-self: center;
+    justify-self: center;
+
     background-color: rgb(7, 99, 38);
-    border-radius: 20px 20px 0px 0px;
+    border-radius: 20px 0px 0px 20px;
     display: flex;
     justify-content: center;
-
-  
+    
 }
 
 .card-name_name
 {
-    font-size: 1.8rem;
-    grid-area: name;
+    width: 300px;
+    white-space: nowrap;
+    text-align: center;
     align-self: center;
+    font-size: 1.8rem;
     color: white;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     font-weight: 500;
+    transform: rotate(-90deg);
+}
+
+@keyframes transImageData-Out
+{
+    0%{
+        opacity: 0.1;
+    }
+    100%{
+        opacity: 1;
+        /* z-index: 3; */
+    }
 }
 
 .card-image{
     height: 100%;
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
-    border-left: 2px solid rgb(7, 99, 38);
-    border-right: 2px solid rgb(7, 99, 38);
-    z-index: 2;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    cursor: pointer;
+    z-index: 2; 
 
-   
+    opacity: 1;
+    transition: opacity 0.8s ease-in-out 0.6s;
+}
+
+.card-image:hover
+{
+    opacity: 0.2;
+    transition: opacity 1s ease 0.4s;
 }
 
 img
 {
     width: 100%;
     height: 100%;
+    border-radius: 0px 10px 10px 0px;
     object-fit: cover;
-}
-
-@keyframes closeStats2
-{
-    100%{
-        transform: translateY(0px);  
-    }
 }
 
 .card-stats
 {
     
-    width: 100%;
-    height: 142px;
+   
     padding: 16px;
-    padding-top: 5px;
-    padding-bottom: 5px;
    
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-around;
 
-    box-shadow: 5px 6px 10px black,
-                -5px 6px 10px  black;
+    background: rgba(235, 235, 235, 0.767);    
 
-    border-radius: 0px 0px 20px 20px;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    
+    border-radius: 0px 10px 10px 0px;
 
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
-    align-self: flex-end;
-
-    animation: closeStats2 3s ease forwards;
+    z-index: 1;
+    animation: transImageData-Out 2s ease forwards;
+   
 }
 
 
-@keyframes openStats1
+
+.card-stats_data
 {
-    100%{
-        transform: translateY(140px);
-    }
+    width: 100%;
+    height: 68%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
-
-.section_card:hover .card-stats
-{
-    visibility: visible;
-    animation: openStats1 1.2s ease 1s forwards;
-
-    /* idCard.style.marginBottom = "140px"    
-    idInfoCard.style.transform = "translateY(140px)";
-    idInfoCard.style.transition = "500ms ease all" */
-}
-
-@keyframes openStats2
-{
-    100%{
-        margin-bottom: 140px;
-    }
-}
-
-.section_card:hover
-{
-    animation: openStats2 1s ease 1s forwards;
-}
-
 
 .card-stats_data h3
 {
     width: 100%;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: bold;
     letter-spacing: 1px;
-    
 }
 
-.card-stats_data h3 span
+.card-stats_data h4
 {
+    width: 90%;
+    font-size: 1.4rem;
+    text-align: center;
     font-weight: 500;
 }
 

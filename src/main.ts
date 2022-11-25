@@ -1,3 +1,4 @@
+import './styles/styles.css'
 import './styles/styles-header.css'
 import './styles/styles-card.css';
 import './styles/styles-buttons.css';

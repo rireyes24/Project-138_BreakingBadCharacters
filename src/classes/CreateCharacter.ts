@@ -25,7 +25,7 @@ export class CreateCharacter {
                
 
                     <div class="card-name">
-                        <h1 class="card-name_name">${name}</h1>
+                        <h1 class="card-name_name">${name.toLocaleUpperCase()}</h1>
                     </div>
 
                     <div class="card-image">
@@ -34,10 +34,14 @@ export class CreateCharacter {
 
                     <div id="BBB${id.toString()}" class="card-stats">
                         <div class="card-stats_data">
-                            <h3 class="">Nickname: <span>${nickname}</span></h3>
-                            <h3 class="">Status: <span>${status}</span></h3>
-                            <h3 class="">Birthday: <span>${birthday}</span></h3>
-                            <h3 class="">Starring: <span>${starring}</span></h3>
+                            <h3 class="">Nickname:</h3>
+                            <h4>${nickname}</h4>
+                            <h3 class="">Status:</h3>
+                            <h4>${status}</h4>
+                            <h3 class="">Birthday:</h3>
+                            <h4>${birthday}</h4>
+                            <h3 class="">Starring:</h3>
+                            <h4>${starring}</h4>
                         </div>
                         <p class="card-stats_phase">${phrase}</p>
                     </div>
