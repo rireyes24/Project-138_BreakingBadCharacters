@@ -110,7 +110,7 @@ img
 @keyframes closeStats2
 {
     100%{
-        transform: translateY(-10px);  
+        transform: translateY(0px);  
     }
 }
 
@@ -137,7 +137,7 @@ img
     grid-row: 2 / 3;
     align-self: flex-end;
 
-    animation: closeStats2 3s ease ;
+    animation: closeStats2 3s ease forwards;
 }
 
 
@@ -151,11 +151,7 @@ img
 .section_card:hover .card-stats
 {
     visibility: visible;
-    
-    
-    animation: openStats1 1.2s ease forwards;
-
-    
+    animation: openStats1 1.2s ease 1s forwards;
 
     /* idCard.style.marginBottom = "140px"    
     idInfoCard.style.transform = "translateY(140px)";
@@ -171,7 +167,7 @@ img
 
 .section_card:hover
 {
-    animation: openStats2 1s ease forwards;
+    animation: openStats2 1s ease 1s forwards;
 }
 
 
