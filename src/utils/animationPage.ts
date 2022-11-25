@@ -8,6 +8,7 @@ export function animationPage()
     dataCharacters.forEach(items => {
         const idCard = document.querySelector(`#BB${items.id}`) as HTMLElement;
         const idInfoCard = document.querySelector(`#BBB${items.id}`) as HTMLElement;
+        const cardStats = document.querySelector('.card-stats') as HTMLElement;
         let saveID = "";
         saveID = idCard.id;
         let isOpen = true;
@@ -16,6 +17,7 @@ export function animationPage()
         {
             idCard.addEventListener('click', () => {
                 
+                cardStats.style.visibility = "visible"
                 idCard.style.marginBottom = "140px"    
                 idInfoCard.style.transform = "translateY(140px)";
                 idInfoCard.style.transition = "500ms ease all"
