@@ -3,42 +3,21 @@
 .header-bar
 {
     width: 100%;
-    height: 28vh;
+    height: 30vh;
     display: grid;
     grid-template-columns: repeat(4, 25%);
-    grid-template-rows: 20% 40% 40%;
+    grid-template-rows: 20% 5% 35% 35% 5% ;
     margin-bottom: 100px;
+
 }
 
 .header-bar_background{
     width: 100%;
     height: 100%;
     grid-column: 1 / 5;
-    background-color:rgb(7, 99, 38);
+    grid-row: 1 / 2;
+    background-color: var(--greenBreakingBad_dark);
     
-}
-
-.sectionTitle
-{
-    width: 98%;
-    height: 140px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    grid-column: 1 / 4;
-    grid-row: 3 / 4;
-    align-self: flex-end;
-    margin-left: var(--marginAlign);
-}
-
-.sectionTitle h1
-{
-    font-size: 3.8rem;
-}
-
-.sectionTitle p
-{  
-    font-size: 2.4rem;
 }
 
 .header-bar_buttons
@@ -46,10 +25,29 @@
     width: 100%;
     height: 100%;
     grid-column: 4 / 5;
-    grid-row: 2 / 3;
+    grid-row: 3 / 4;
+    align-self: flex-start;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
 }
 
+
+
+.sectionTitle
+{
+    width: 100%;
+    height: 100%;
+    grid-column: 1 / 4;
+    grid-row: 4 / 5;
+    display: grid;
+    grid-template-columns: 4% 96%;
+}
+
+.logoBBC
+{
+    width: 60%;
+    grid-column: 2 / 3;
+    align-self: center;
+}

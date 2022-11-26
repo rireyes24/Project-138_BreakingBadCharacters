@@ -2,10 +2,11 @@
     url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap');
 
 
-/* :root
+:root
 {
-    
-} */
+    --greenBreakingBad_soft: #006d38;
+    --greenBreakingBad_dark: #0d483f;
+}
 
 *
 {
