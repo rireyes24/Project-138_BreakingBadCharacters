@@ -1,79 +1,31 @@
 import dataCharacters from './dataCharacters'
 
+
+
+
 export function animationPage()
 { 
+    const buttonOrderBy = document.querySelector('#buttonOrderBy') as HTMLElement;
+    const buttonsOrder = document.querySelector('#buttonsOrder') as HTMLElement;
+    const sectionListButtons = document.querySelector('.sectionListButtons') as HTMLElement;
+    const btnOrder = document.querySelector('.btnOrder') as HTMLElement;
+    let isClick = true;
 
-    
 
-    dataCharacters.forEach(items => {
-        const idCard = document.querySelector(`#BB${items.id}`) as HTMLElement;
-        const idInfoCard = document.querySelector(`#BBB${items.id}`) as HTMLElement;
-        const cardStats = document.querySelector('.card-stats') as HTMLElement;
-        let saveID = "";
-        saveID = idCard.id;
-        let isOpen = true;
+    buttonOrderBy.addEventListener('click', () => {
 
-        if(isOpen == true)
-        {
-            idCard.addEventListener('click', () => {
-                
-                // Aqui ira la accion de hacer click para mostrar los datos 
-    
-                idInfoCard.style.transition = "500ms ease all"
-                saveID = idInfoCard.id;
-               
-            })
-            isOpen = false;
-            console.log(isOpen);
-        }
-            // if(close == true)
-            // {
-            //     idCard.addEventListener('click', () => {
-                
-            //         if(saveID)
-            //         {
-            //             idCard.style.height = "360px"
-            //             console.log(close);
-            //             idInfoCard.style.transform = "translateY(0px)";
-            //             idInfoCard.style.transition = "500ms ease all"
-            //             close = false;
-            //         }
-            //     })
-            // }
-
-    })
-
-    
- 
-
-    const dataC = dataCharacters.forEach(items => {
-
-        const idCard = document.querySelector(`#BB${items.id}`) as HTMLElement;
-        const idInfoCard = document.querySelector(`#BBB${items.id}`) as HTMLElement;
-        
-        let newIDCard = "B" + idCard.id;
-        
-        //Genero el click.
-        idCard.addEventListener('click', () => {
+        //Click ON, Click OFF
+        if(isClick === true){ 
+            isClick = false;
+            buttonsOrder.style.animation = "openListButtons 1s ease forwards";
+            sectionListButtons.style.zIndex = "8";
             
-            // if(newIDCard === idInfoCard.id)
-            // {
-            //     idCard.style.height = "520px"
-    
-            //     idInfoCard.style.transform = "translateY(140px)";
-            //     idInfoCard.style.transition = "500ms ease all"
-            //     saveID = idInfoCard.id;
-                
-            // } else if(saveID == idInfoCard.id)
-            // {
-            //     idCard.style.height = "360px"
-    
-            //     idInfoCard.style.transform = "translateY(0px)";
-            //     idInfoCard.style.transition = "500ms ease all"
-            // }
-        });
-    })
-    
-    console.log(dataC);
-
+        }else{
+            isClick = true;
+            buttonsOrder.style.animation = "closeListButtons 1s ease forwards";
+            buttonsOrder.style.transition = "transform 1s ease";
+        }
+    });
 }
+
+

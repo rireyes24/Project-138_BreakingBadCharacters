@@ -1,8 +1,8 @@
 import './styles/styles.css'
-import './styles/styles-header.css'
-import './styles/styles-card.css';
-import './styles/styles-buttons.css';
-import './styles/styles-footer.css'
+import './styles/header.css'
+import './styles/card.css';
+import './styles/buttons.css';
+import './styles/footer.css'
 import './styles/resposiveDesign.css'
 import {CreateCharacter} from './classes/CreateCharacter'
 import dataCharacters from './utils/dataCharacters'
@@ -47,14 +47,13 @@ generatorCharacters();
 
 
 
-
-
 //Genera el click del boton Default
 const btnDefault = document.querySelector('#btnDefault') as HTMLElement;
 btnDefault.addEventListener('click', () => {
     selector.innerHTML = RenderCharacters(getIDs);
     generatorCharacters();
-    
+
+    buttonsOrder.style.animation = "closeListButtons 1s ease forwards";
 });
 
 
@@ -63,16 +62,19 @@ const btnAlphabetical = document.querySelector('#btnAlphabetical') as HTMLElemen
 btnAlphabetical.addEventListener('click', () => {
     selector.innerHTML = RenderCharacters(getIDsAlphabetically);
     generatorCharacters();
-   
+
+    buttonsOrder.style.animation = "closeListButtons 1s ease forwards";
 });
 
 
 //Genera el click del boton Alive
 const btnAlive = document.querySelector("#btnAlive") as HTMLElement;
+const buttonsOrder = document.querySelector('#buttonsOrder') as HTMLElement;
 btnAlive.addEventListener('click', () => {
     selector.innerHTML = RenderCharacters(getIDsAlive);
     generatorCharacters();
-    
+
+    buttonsOrder.style.animation = "closeListButtons 1s ease forwards";
 })
 
 
@@ -81,7 +83,8 @@ const btnDead = document.querySelector('#btnDead') as HTMLElement;
 btnDead.addEventListener('click', () => {
     selector.innerHTML = RenderCharacters(getIDsDead);
     generatorCharacters();
-   
+
+    buttonsOrder.style.animation = "closeListButtons 1s ease forwards";
 })
 
 
