@@ -1,14 +1,9 @@
-import dataCharacters from './dataCharacters'
-
-
-
 
 export function animationPage()
 { 
     const buttonOrderBy = document.querySelector('#buttonOrderBy') as HTMLElement;
     const buttonsOrder = document.querySelector('#buttonsOrder') as HTMLElement;
     const sectionListButtons = document.querySelector('.sectionListButtons') as HTMLElement;
-    const btnOrder = document.querySelector('.btnOrder') as HTMLElement;
     let isClick = true;
 
 
