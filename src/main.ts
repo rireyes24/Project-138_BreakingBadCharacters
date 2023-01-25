@@ -1,9 +1,9 @@
 import './styles/styles.css'
 import './styles/header.css'
-import './styles/card.css';
+// import './styles/card.css';
 import './styles/buttons.css';
 import './styles/footer.css'
-import './styles/resposiveDesign.css'
+// import './styles/mediaQueries.css'
 import {CreateCharacter} from './classes/CreateCharacter'
 import dataCharacters from './utils/dataCharacters'
 import { HeaderBar } from './components/HeaderBar' 

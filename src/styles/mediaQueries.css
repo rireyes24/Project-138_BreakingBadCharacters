@@ -41,21 +41,6 @@
 }
 
 
-/* Laptop */
-@media only screen and (min-width: 1024px)
-{
-    .sectionCards
-    {
-        grid-template-columns: repeat(4, 25%);
-    }
-
-    .header-bar
-    {
-        height: 50vh;
-        grid-template-rows: 16% 10% 74%;
-        margin-bottom: 40px;
-    }
-}
 
 
 /* Laptop L */
