@@ -2,12 +2,12 @@
 {
     position: relative;
     width: 100%;
-    height: 26vh;
+    height: 34vh;
     display: grid;
     background-color: aliceblue;
 
     grid-template-columns: 40% 60%;
-    grid-template-rows: 10% 66% 24%;
+    grid-template-rows: 10% 69% 21%;
     padding-bottom: 8px;
     margin-bottom: 100px;
 }
@@ -33,7 +33,7 @@
 .header__buttonOrderBy
 {
     width: 136px;
-    height: 36px;
+    height: 30px;
     background-color: rgb(190, 190, 190);
     display: flex;
     justify-content: space-around;
@@ -88,7 +88,7 @@
 ::-webkit-scrollbar
 {
     width: 0px;
-    height: 4px;
+    height: 2px;
     overflow: hidden;
     
 }
@@ -114,7 +114,7 @@
 {
     scroll-snap-align: center;    
     width: 100px;
-    height: 36px;
+    height: 30px;
 
     text-align: center;
     border: none;
