@@ -9,10 +9,10 @@ import dataCharacters from './utils/dataCharacters'
 import { headerBackground, svgLogo, buttonOrderBy} from './components/Header' 
 import { buttonsAliveDead } from './components/Buttons';
 import {RenderCharacters} from './components/RenderCharacters'
-import {getIDs, getIDsAlphabetically, getIDsAlive, getIDsDead} from './utils/getData'
+import {getIDs, /*getIDsAlphabetically,*/ getIDsAlive, getIDsDead} from './utils/getData'
 import { Footer } from './components/Footer';
-import {animationPage} from './utils/animationPage'
-
+//import {animationPage} from './utils/animationPage'
+import {registrarImagen} from './utils/observer'
 
 //Renderiza la barra del Header
 export const renderHeader = document.querySelector('#headerBar') as HTMLElement;
@@ -26,21 +26,23 @@ if(renderHeader != null){
 const selector = document.querySelector('#sectionCards') as HTMLElement;
 if(selector != null)
 {
-    selector.innerHTML = RenderCharacters(getIDs);
-    
+    selector.append(RenderCharacters(getIDs));
 }
+
+
 
 //Crea los personajes
 function generatorCharacters()
 {
     dataCharacters.forEach(items => {
-        CreateCharacter.create(items);
+        CreateCharacter.create(items);        
     })
-    animationPage();
+   
 }
 generatorCharacters();
 
-
+registrarImagen(CreateCharacter);
+console.log(registrarImagen(selector));
 
 //Genera el click del boton Default
 const btnDefault = document.querySelector('#btnDefault') as HTMLElement;
@@ -52,14 +54,14 @@ btnDefault.addEventListener('click', () => {
 });
 
 
-//Genera el click del boton Alphabetical
-const btnAlphabetical = document.querySelector('#btnAlphabetical') as HTMLElement;
-btnAlphabetical.addEventListener('click', () => {
-    selector.innerHTML = RenderCharacters(getIDsAlphabetically);
-    generatorCharacters();
+// //Genera el click del boton Alphabetical
+// const btnAlphabetical = document.querySelector('#btnAlphabetical') as HTMLElement;
+// btnAlphabetical.addEventListener('click', () => {
+//     selector.innerHTML = RenderCharacters(getIDsAlphabetically);
+//     generatorCharacters();
 
-    buttonsOrder.style.animation = "closeListButtons 1s ease forwards";
-});
+//     buttonsOrder.style.animation = "closeListButtons 1s ease forwards";
+// });
 
 
 //Genera el click del boton Alive

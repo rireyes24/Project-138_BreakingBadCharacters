@@ -1,15 +1,20 @@
+import {registrarImagen} from '../utils/observer'
 
-export const RenderCharacters = (getIDs: number[]) => {
-    
-    let totalRender = [];
+
+export const RenderCharacters = (getIDs: number[]) : string | Node | any => {
+
+    const sectionCard = document.querySelector('#sectionCards');
 
     for(let i = 0; i < getIDs.length; i++)
     {
-        totalRender.push(`<div id="BB${getIDs[i]}" class="section_card"></div>`);
+        const divCard = document.createElement('div');
+        divCard.id = `BB${getIDs[i]}`;
+        divCard.className = 'section_card';
+
+        sectionCard?.append(divCard);
     }
 
-    const stringRender = totalRender.toString();
-    const render = stringRender.replace(/,/g, "");
-    return render;
+    registrarImagen(sectionCard);
+    
 }
 
