@@ -1,127 +1,180 @@
-.header-bar
+.header
 {
     position: relative;
     width: 100%;
-    height: 32vh;
+    height: 26vh;
     display: grid;
     background-color: aliceblue;
-    grid-template-rows: 16% 10% 74%;
-    grid-template-columns: 60% 40%;
+
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 10% 66% 24%;
+    padding-bottom: 8px;
     margin-bottom: 100px;
 }
 
-
-.header-bar_background{
+.header__background
+{
     width: 100%;
     height: 100%;
     grid-column: 1 / 5;
     grid-row: 1 / 2;
     background-color: var(--greenBreakingBad_dark);
- 
-    z-index: 4;
 }
-
-.backgrounds_buttons
-{
-    background: aliceblue;
-    width: 100%;
-    height: 100%;
-
-    grid-column: 2 / 3;
-    grid-row: 1 / 3;
-
-    z-index: 3;
-}
-
-.sectionListButtons
-{
-    width: 94%;
-    height: 100%;
-    
-    grid-column: 1 / 3;
-    grid-row: 3/ 4;
-    justify-self: center;
-    z-index: 1;
-}
-
-.header-bar_buttonsList
-{
-    position: absolute;
-    top: -46%;
-    right: 10%;
-
-    width: 80%;
-    height: 100%;
-    
-    grid-column: 2 / 3;
-    grid-row: 1 / 3;
-
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
-.sectionTitle-ButtonOrder
-{
-    width: 94%;
-    height: 100%;
-    
-    grid-column: 1 / 3;
-    grid-row: 3/ 4;
-    justify-self: center;
-
-    display: grid;
-    grid-template-columns: 70% 30%;
-
-    z-index: 1;
-    
-
-}
-
-    .buttonsOrder
-    {
-        width: 138px;
-        height: 160px;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-
-        transform: translateY(0px);
-        transition: transform 1s ease;
-    }
-
 
 .header__logoBBC
 {
-    width: 60%;
-    grid-column: 1 / 2;
+    width: 68%;
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+    justify-self: center;
     align-self: center;
 }
 
-
-.buttonOrderBy
+.header__buttonOrderBy
 {
-    grid-column: 2 / 3;
-    align-self: flex-start;
-    justify-self: flex-end;
+    width: 136px;
+    height: 36px;
+    background-color: rgb(190, 190, 190);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 6%;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1.4rem;
+    font-family: 'Quicksand';
+    letter-spacing: 2px;
 
-    z-index: 3;
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    align-self: flex-start;
+    justify-self: center;
+    
 }
 
-.buttonOrderBy span
+.header__buttonOrderBy:hover
 {
-    width: 28px;
-    height: 28px;
+    border-radius: 50px;
+    background-color: gainsboro;
+}
+
+
+.spanMenu
+{
+    width: 24px;
+    height: 24px;
     background-image: url('/src/assets/icons/deployOptions.png');
     background-size: contain;
 }
 
-.buttonOrderBy:hover
+
+.header__buttonsAliveDead
+{
+    /* position: absolute; */
+    display: flex;
+
+    width: 100%;
+    height: 100%;
+
+    grid-column: 2 / 3;
+    grid-row: 3 / 4; 
+
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;    
+    scroll-snap-type: x proximity;
+}
+
+::-webkit-scrollbar
+{
+    width: 0px;
+    height: 4px;
+    overflow: hidden;
+    
+}
+
+::-webkit-scrollbar-track 
+{
+    background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb 
+{
+    width: 20%;
+    background: #888; 
+    border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+
+
+.btnOrder
+{
+    scroll-snap-align: center;    
+    width: 100px;
+    height: 36px;
+
+    text-align: center;
+    border: none;
+    border-radius: 50px;
+    background-color: rgb(190, 190, 190);
+    padding: 2%;
+    
+    cursor: pointer;
+    color: rgb(24, 24, 24);
+
+    font-weight: 500;
+    font-size: 1.5rem;
+    font-family: 'Quicksand';
+    letter-spacing: 1px;
+    margin-right: 10px;
+}
+
+.btnOrder:hover
 {
     background-color: gainsboro;
-    border-radius: 4px;
+    border-radius: 50px;
+} 
+
+.btnOrder-Alphabetic
+{
+    width: 160px;
 }
+
+.btnOrder-Alphabetic button
+{
+    width: 140px;
+}
+
+.btnOrder-FWhite
+{
+    width: 180px;
+}
+
+.btnOrder-FWhite button
+{
+    width: 160px;
+}
+
+.btnOrder-familySala
+{
+    width: 180px;
+}
+
+.btnOrder-familySala button
+{
+    width: 180px;
+}
+
+
+
+
+
+
+
+
 
 
 
