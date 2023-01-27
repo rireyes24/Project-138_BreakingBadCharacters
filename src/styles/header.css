@@ -2,14 +2,14 @@
 {
     position: relative;
     width: 100%;
-    height: 34vh;
+    height: 32vh;
     display: grid;
     background-color: aliceblue;
 
-    grid-template-columns: 40% 60%;
-    grid-template-rows: 10% 69% 21%;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 10% 74% 16%;
     padding-bottom: 8px;
-    margin-bottom: 100px;
+    margin-bottom: 60px;
 }
 
 .header__background
@@ -23,7 +23,7 @@
 
 .header__logoBBC
 {
-    width: 68%;
+    width: 78%;
     grid-column: 1 / 3;
     grid-row: 2 / 3;
     justify-self: center;
@@ -32,9 +32,9 @@
 
 .header__buttonOrderBy
 {
-    width: 136px;
+    width: 80px;
     height: 30px;
-    background-color: rgb(190, 190, 190);
+    background-color: #CFD5E8;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -56,7 +56,7 @@
 .header__buttonOrderBy:hover
 {
     border-radius: 50px;
-    background-color: gainsboro;
+    background-color: #D7D6FF;
 }
 
 
@@ -75,10 +75,12 @@
     display: flex;
 
     width: 100%;
-    height: 100%;
+    height: 88%;
 
     grid-column: 2 / 3;
     grid-row: 3 / 4; 
+
+    align-self: flex-start;
 
     overflow-x: scroll;
     overscroll-behavior-x: contain;    
@@ -119,7 +121,7 @@
     text-align: center;
     border: none;
     border-radius: 50px;
-    background-color: rgb(190, 190, 190);
+    background-color: #CFD5E8;
     padding: 2%;
     
     cursor: pointer;
@@ -134,7 +136,7 @@
 
 .btnOrder:hover
 {
-    background-color: gainsboro;
+    background-color: #D7D6FF;
     border-radius: 50px;
 } 
 

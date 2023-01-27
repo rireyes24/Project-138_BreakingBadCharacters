@@ -6,7 +6,7 @@ export const svgLogo = `<svg class="header__logoBBC" id="Layer_1" data-name="Lay
 
 export const buttonOrderBy = document.createElement('button');
 buttonOrderBy.className = 'header__buttonOrderBy';
-buttonOrderBy.innerText = 'OrderBy';
+// buttonOrderBy.innerText = 'Order By';
 
 const spanMenu = document.createElement('span');
 spanMenu.className = 'spanMenu';

@@ -1,5 +1,5 @@
 import Stats from '../utils/interface'
-import {registrarImagen} from '../utils/observer'
+
 
 export class CreateCharacter {
     
@@ -40,6 +40,7 @@ export class CreateCharacter {
 
             const image = document.createElement('img');
             image.src = `${imageUrl}`;
+            image.loading = 'lazy';
             image.alt = `${name}`
 
             cardImage.appendChild(image);
@@ -88,8 +89,6 @@ export class CreateCharacter {
         
 
             input.append(cardName, cardImage, cardStats);
-
-            registrarImagen(cardImage);
             
         }
     }

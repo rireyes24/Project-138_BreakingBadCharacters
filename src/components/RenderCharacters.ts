@@ -1,6 +1,3 @@
-import {registrarImagen} from '../utils/observer'
-
-
 export const RenderCharacters = (getIDs: number[]) : string | Node | any => {
 
     const sectionCard = document.querySelector('#sectionCards');
@@ -13,8 +10,5 @@ export const RenderCharacters = (getIDs: number[]) : string | Node | any => {
 
         sectionCard?.append(divCard);
     }
-
-    registrarImagen(sectionCard);
-    
 }
 

@@ -12,7 +12,7 @@ import {RenderCharacters} from './components/RenderCharacters'
 import {getIDs, /*getIDsAlphabetically,*/ getIDsAlive, getIDsDead} from './utils/getData'
 import { Footer } from './components/Footer';
 //import {animationPage} from './utils/animationPage'
-import {registrarImagen} from './utils/observer'
+
 
 //Renderiza la barra del Header
 export const renderHeader = document.querySelector('#headerBar') as HTMLElement;
@@ -41,8 +41,6 @@ function generatorCharacters()
 }
 generatorCharacters();
 
-registrarImagen(CreateCharacter);
-console.log(registrarImagen(selector));
 
 //Genera el click del boton Default
 const btnDefault = document.querySelector('#btnDefault') as HTMLElement;
