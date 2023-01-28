@@ -40,7 +40,7 @@ const dataCharacters  = [
         nickname: "",
         birthday: "08-11-1970",
         status: "Alive",
-        imageUrl: "https://es.rollingstone.com/wp-content/uploads/2022/08/Creador-de-Breaking-Bad-lamenta-el-odio-que-recibio-Skyler-White.jpg",
+        imageUrl: "https://res.cloudinary.com/dejj8n6g7/image/upload/v1674870851/BreakingBadCharacters/Skyler_White_xshjct.jpg",
         phrase: "",
         starring: "Anna Gunn",
         occupation: ["House wife", "Book Keeper", "Car Wash Manager", "Taxi Dispatcher"],
