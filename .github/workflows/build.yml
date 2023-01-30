@@ -1,0 +1,20 @@
+#Flujo para ejecutar un build de produccion (rama main)
+#En Netlify con el proposito de que nuestr contedito se actualice.
+
+name: Trigger Netlify Build
+
+on: 
+  schedule:
+    # You can use https://crontab.guru to generate the 
+    # desired cron scheduled
+    - cron: '0 10 * * *' # At 10:00 am todos los dias.
+
+  jobs:
+    build:
+      name: Request Netlify Webhook
+      runs-on: ubuntu-latest
+      steps:
+      - name: Ping
+        run: curl -X POST -d {} https://api.netlify.com/build_hooks/63d7133c6220e53d16dbb1ba
+
+D
