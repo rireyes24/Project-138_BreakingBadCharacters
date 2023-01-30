@@ -9,12 +9,11 @@ on:
     # desired cron scheduled
     - cron: '0 10 * * *' # At 10:00 am todos los dias.
 
-  jobs:
-    build:
-      name: Request Netlify Webhook
-      runs-on: ubuntu-latest
-      steps:
-      - name: Ping
-        run: curl -X POST -d {} https://api.netlify.com/build_hooks/63d7133c6220e53d16dbb1ba
+jobs:
+  build:
+    name: Request Netlify Webhook
+    runs-on: ubuntu-latest
+    steps:
+    - name: Ping
+      run: curl -X POST -d {} https://api.netlify.com/build_hooks/63d7133c6220e53d16dbb1ba
 
-D
