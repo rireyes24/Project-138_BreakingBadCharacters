@@ -17,4 +17,3 @@ on:
       - name: Ping
         run: curl -X POST -d {} https://api.netlify.com/build_hooks/63d7133c6220e53d16dbb1ba
 
-D
